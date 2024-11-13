@@ -1,7 +1,7 @@
-import { useState } from "react";
+// import { useState } from "react";
 
 export default function Hero() {
-  const [activeTab, setActiveTab] = useState(0);
+  // const [activeTab, setActiveTab] = useState(0);
   return (
     <div className="flex flex-col">
       <div className="relative h-[450px]">
