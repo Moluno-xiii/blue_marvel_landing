@@ -1,26 +1,33 @@
 const Footer = () => {
   const date = new Date();
   return (
-    <footer className="bg-secondary flex h-[330px] flex-col justify-center space-y-5 px-10">
-      <div className="flex flex-row justify-between border-b border-black pb-10">
-        <div className="flex flex-col gap-y-10">
+    <footer className="flex flex-col justify-center space-y-5 bg-secondary px-10 py-10">
+      <div className="flex flex-col items-center gap-y-7 border-b border-black border-opacity-40 pb-10 md:flex-row md:justify-between">
+        <div className="flex flex-col gap-y-10 max-md:items-center">
           <div>
             <img src="/logo.svg" alt="blue marvel logo" />
           </div>
-          <span className="max-w-sm text-[#A7A18C]">
+          <span className="max-w-sm text-white text-opacity-80">
             Empowering your business with innovation, strategic investment, and
             expert management.
           </span>
         </div>
-        <ul className="flex flex-row items-center gap-x-14 font-semibold text-white">
-          <li>Services</li>
-          <li>About Us</li>
-          <li>Our Works</li>
-          <li>Blog</li>
-          <li>Contact Us</li>
+        <ul className="flex flex-col items-center gap-x-14 font-semibold text-white text-opacity-80 lg:flex-row">
+          <li className="border-black border-opacity-60 p-2 hover:border-b-2">
+            <a href="#services">Services</a>
+          </li>
+          <li className="border-black border-opacity-60 p-2 hover:border-b-2">
+            <a href="#partners">Partners</a>
+          </li>
+          <li className="border-black border-opacity-60 p-2 hover:border-b-2">
+            <a href="#tech-stack">Tech Stack</a>
+          </li>
+          <li className="border-black border-opacity-60 p-2 hover:border-b-2">
+            <a href="#contact-us">Contact Us</a>
+          </li>
         </ul>
       </div>
-      <span className="self-center">
+      <span className="self-center text-center text-white text-opacity-65">
         &copy; {date.getFullYear()} Blue Marvel Technologies. All rights
         reserved.
       </span>
