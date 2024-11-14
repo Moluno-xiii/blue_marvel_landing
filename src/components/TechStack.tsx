@@ -44,8 +44,11 @@ const TechStack = () => {
               </li>
             ))}
           </ul>
-          <button className="flex flex-row items-center justify-between gap-x-10 border-b-2 border-black p-2 transition-all duration-300 hover:border-orange-500 hover:text-orange-500">
-            Our full repertoire <HiOutlineArrowLongRight />
+          <button className="border-b-2 border-black p-2 transition-all duration-100 hover:translate-x-5 hover:border-orange-500 hover:text-orange-500">
+            <span className="flex flex-row items-center justify-between gap-x-10 transition-all duration-300 hover:translate-x-5">
+              Our full repertoire
+              <HiOutlineArrowLongRight />
+            </span>
           </button>
         </div>
       </div>

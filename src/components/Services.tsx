@@ -88,9 +88,9 @@ const Service = ({
           width={372}
         />
       </div>
-      <div className="z-2 absolute top-28 flex h-[250px] max-w-[340px] flex-col justify-between bg-white px-4 py-3 text-black shadow-lg transition-all duration-500 hover:-translate-x-5 max-md:left-20 sm:top-40 md:-right-10">
+      <div className="z-2 absolute top-28 flex h-[250px] max-w-[340px] flex-col justify-between bg-white px-4 py-3 text-black shadow-lg transition-all duration-500 hover:-translate-x-5 hover:shadow-2xl max-md:left-20 sm:top-40 md:-right-10">
         <p className="relative mt-3 font-semibold xl:text-xl">{service.text}</p>
-        <div className="flex cursor-pointer flex-row items-center gap-x-2 self-start border-orange-500 pb-1 transition-all duration-300 hover:border-b-2">
+        <div className="flex cursor-pointer flex-row items-center gap-x-2 self-start border-orange-500 pb-1 transition-all duration-100 hover:border-b-2">
           <span className="max-sm:text-sm">Learn more</span>
           <FaChevronRight className="text-orange-500" />
         </div>

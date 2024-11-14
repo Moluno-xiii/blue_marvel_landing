@@ -103,32 +103,16 @@ const Partners = () => {
               1,200+ projects executed successfully and an average relationship
               of over 3 years.
             </span>
-            <button className="flex flex-row items-center justify-between gap-x-10 self-start border-b-2 border-black transition-all duration-300 hover:border-orange-500 hover:text-orange-500">
-              Our greatest hits <HiOutlineArrowLongRight />
+            <button className="self-start border-b-2 border-black transition-all duration-100 hover:translate-x-5 hover:border-orange-500 hover:text-orange-500">
+              <span className="flex flex-row items-center justify-between gap-x-10 transition-all duration-300 hover:translate-x-5">
+                Our greatest hits <HiOutlineArrowLongRight />
+              </span>
             </button>
           </div>
         </div>
         <ul className="mt-10 grid grid-cols-1 gap-7 sm:grid-cols-2 md:grid-cols-3">
           {partnersInfo.map((partner) => (
-            <li
-              key={partner.title}
-              className="flex flex-col gap-y-7 rounded-xl px-4 py-6 shadow-md"
-            >
-              <div className="flex flex-row items-center justify-between">
-                <img
-                  src={partner.imageUrl}
-                  className="h-5"
-                  alt="partner's image"
-                />
-                <HiArrowRight className="hover:text-orange-500" />
-              </div>
-              <p className="text-xs">"{partner.text}"</p>
-
-              <div className="mt-auto flex flex-col text-sm">
-                <span className="font-bold">{partner.author}</span>
-                <span>{partner.job}</span>
-              </div>
-            </li>
+            <PartnerComponent partner={partner} key={partner.title} />
           ))}
         </ul>
       </div>
@@ -137,3 +121,33 @@ const Partners = () => {
 };
 
 export default Partners;
+
+interface PartnerComponentProps {
+  partner: {
+    job: string;
+    title: string;
+    imageUrl: string;
+    text: string;
+    author: string;
+  };
+}
+
+const PartnerComponent: React.FC<PartnerComponentProps> = ({ partner }) => {
+  return (
+    <li
+      key={partner.title}
+      className="flex flex-col gap-y-7 rounded-xl px-4 py-6 shadow-md transition-all duration-300 hover:shadow-xl"
+    >
+      <div className="flex flex-row items-center justify-between">
+        <img src={partner.imageUrl} className="h-5" alt="partner's image" />
+        <HiArrowRight className="hover:text-orange-500" />
+      </div>
+      <p className="text-xs">"{partner.text}"</p>
+
+      <div className="mt-auto flex flex-col text-sm">
+        <span className="font-bold">{partner.author}</span>
+        <span>{partner.job}</span>
+      </div>
+    </li>
+  );
+};
