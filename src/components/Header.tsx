@@ -11,7 +11,7 @@ const Header = () => {
   };
   return (
     <nav className="sticky top-0 z-10 bg-[#f6f6f6] shadow-lg">
-      <div className="mx-auto flex h-[100px] max-w-7xl flex-row items-center justify-between px-5">
+      <div className="mx-auto flex h-20 max-w-7xl flex-row items-center justify-between px-5 md:h-[100px]">
         <div>
           <img src="/logo.svg" alt="blue marvel logo" />
         </div>

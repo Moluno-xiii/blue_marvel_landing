@@ -61,7 +61,6 @@ export default function Hero() {
   };
 
   return (
-    // <div className="bg-[#003E4E]">
     <div className="bg-[#f5f5f5]">
       <ul className="mx-auto flex max-w-7xl flex-col">
         {heroDataArray.map((heroData, index) => (
@@ -111,25 +110,25 @@ const DataComponent: React.FC<DataComponentProps> = ({
         alt="hero-image"
       />
 
-      <div className="absolute left-10 top-1/4 flex flex-col gap-y-5 font-bold text-white md:left-[100px]">
+      <div className="absolute left-10 top-1/4 ml-5 flex flex-col gap-y-5 font-bold text-white md:left-[100px]">
         <span className="text-lg md:text-2xl">{date}</span>
-        <span className="text-3xl sm:text-5xl md:max-w-xl lg:max-w-[730px] lg:text-6xl">
+        <span className="text-3xl max-sm:max-w-[300px] sm:text-5xl md:max-w-xl lg:max-w-[730px] lg:text-6xl">
           {heading}
         </span>
-        <span className="text-2l">{text}</span>
+        <span className="text-lg max-lg:max-w-lg max-sm:max-w-[300px] md:text-2xl">
+          {text}
+        </span>
         <button className="self-start bg-tertiary p-3 text-xl transition duration-300 hover:bg-opacity-75 md:p-5">
           {buttonText}
         </button>
       </div>
       <FaChevronRight
         onClick={onNextTab}
-        size={50}
-        className="border-whit4 hover:bg-primary absolute right-5 top-1/2 rounded-full border border-white bg-transparent p-3 text-white transition-all duration-300 hover:border-none hover:bg-secondary"
+        className="border-whit4 hover:bg-primary absolute right-5 top-1/2 size-6 rounded-full border border-white bg-transparent p-1 text-white transition-all duration-300 hover:border-none hover:bg-secondary md:size-[50px] md:p-3"
       />
       <FaChevronLeft
         onClick={onPreviousTab}
-        size={50}
-        className="hover:bg-primary absolute left-5 top-1/2 rounded-full border border-white bg-transparent p-3 text-white transition-all duration-300 hover:border-none hover:bg-secondary"
+        className="hover:bg-primary absolute left-5 top-1/2 size-6 rounded-full border border-white bg-transparent p-1 text-white transition-all duration-300 hover:border-none hover:bg-secondary md:size-[50px] md:p-3"
       />
     </li>
   );
