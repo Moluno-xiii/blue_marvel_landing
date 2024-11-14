@@ -9,7 +9,7 @@ import TechStack from "./components/TechStack";
 
 function App() {
   return (
-    <div className="mx-auto max-w-7xl bg-white">
+    <div className="bg-[#f6f6f6]">
       <Header />
       <Hero />
       <Services />
