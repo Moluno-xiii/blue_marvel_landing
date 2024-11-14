@@ -16,20 +16,23 @@ const Header = () => {
           <img src="/logo.svg" alt="blue marvel logo" />
         </div>
         <ul className="hidden flex-row justify-between gap-x-10 md:flex">
-          <li className="cursor-pointer border-secondary pb-1 capitalize text-secondary transition-all duration-100 hover:border-b-2 hover:text-opacity-75">
+          <li className="border-primary text-primary cursor-pointer pb-1 capitalize transition-all duration-100 hover:border-b-2 hover:text-opacity-75">
             <a href="#tech-stack">Tech Stack</a>
           </li>
-          <li className="cursor-pointer border-secondary pb-1 capitalize text-secondary transition-all duration-100 hover:border-b-2 hover:text-opacity-75">
+          <li className="border-primary text-primary cursor-pointer pb-1 capitalize transition-all duration-100 hover:border-b-2 hover:text-opacity-75">
             <a href="#partners">Partners</a>
           </li>
-          <li className="cursor-pointer border-secondary pb-1 capitalize text-secondary transition-all duration-100 hover:border-b-2 hover:text-opacity-75">
+          <li className="border-primary text-primary cursor-pointer pb-1 capitalize transition-all duration-100 hover:border-b-2 hover:text-opacity-75">
             <a href="#services">Services</a>
           </li>
         </ul>
-        <button className="hidden rounded-full border border-secondary bg-secondary px-6 py-2 text-white transition duration-300 hover:bg-transparent hover:text-secondary md:block">
+        <button className="border-primary bg-primary hover:text-primary hidden rounded-full border px-6 py-2 text-white transition duration-300 hover:bg-transparent md:block">
           <a href="#contact-us">Contact us</a>
         </button>
-        <div className="md:hidden" onClick={handleToggleMenu}>
+        <div
+          className="text-primary font-bold md:hidden"
+          onClick={handleToggleMenu}
+        >
           {!isMenuOpen ? <RxHamburgerMenu /> : <IoClose />}
         </div>
 

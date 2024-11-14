@@ -15,7 +15,7 @@ const techStack = [
   "ios",
   "golang",
   "vue.js",
-  "c##",
+  "c++",
 ];
 const TechStack = () => {
   return (

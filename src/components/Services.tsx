@@ -55,9 +55,6 @@ const Services = () => {
         <span className="self-center text-4xl font-bold underline">
           Services
         </span>
-        <span className="text-4xl font-bold capitalize">
-          Software developement & design
-        </span>
         <ul
           id="services"
           className="grid grid-cols-1 gap-x-20 gap-y-44 md:grid-cols-2 lg:grid-cols-3"
