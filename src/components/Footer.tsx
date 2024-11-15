@@ -14,16 +14,16 @@ const Footer = () => {
             </span>
           </div>
           <ul className="flex flex-col items-center gap-x-14 font-semibold text-white text-opacity-80 lg:flex-row">
-            <li className="border-orange-500 p-2 duration-100 hover:border-b-2">
+            <li className="border-darkBlue p-2 duration-100 hover:border-b-2">
               <a href="#services">Services</a>
             </li>
-            <li className="border-orange-500 p-2 duration-100 hover:border-b-2">
+            <li className="border-darkBlue p-2 duration-100 hover:border-b-2">
               <a href="#partners">Partners</a>
             </li>
-            <li className="border-orange-500 p-2 duration-100 hover:border-b-2">
+            <li className="border-darkBlue p-2 duration-100 hover:border-b-2">
               <a href="#tech-stack">Tech Stack</a>
             </li>
-            <li className="border-orange-500 p-2 duration-100 hover:border-b-2">
+            <li className="border-darkBlue p-2 duration-100 hover:border-b-2">
               <a href="#contact-us">Contact Us</a>
             </li>
           </ul>

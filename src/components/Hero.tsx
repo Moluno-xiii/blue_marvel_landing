@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaChevronRight } from "react-icons/fa";
 import { FaChevronLeft } from "react-icons/fa6";
 
@@ -60,6 +60,10 @@ export default function Hero() {
     }
   };
 
+  useEffect(() => {
+    const interval = setInterval(handleNextTab, 10000);
+    return () => clearInterval(interval);
+  }, [activeTab]);
   return (
     <div className="bg-[#f5f5f5]">
       <ul className="flex flex-col">
@@ -101,35 +105,34 @@ const DataComponent: React.FC<DataComponentProps> = ({
 }) => {
   const { date, heading, text, buttonText, imageUrl } = heroData;
   return (
-    <li
-      className={`relative block h-[500px] ${index !== activeTab && "hidden"}`}
-    >
+    <li className={`block h-[500px] ${index !== activeTab && "hidden"}`}>
       <img
         className="bg h-full w-full bg-cover"
         src={imageUrl}
         alt="hero-image"
       />
-
-      <div className="mx-auto flex w-dvw max-w-7xl -translate-y-96 flex-col items-center justify-center gap-y-5 font-bold text-white 2xl:left-1/4">
-        <span className="text-lg md:text-2xl">{date}</span>
-        <span className="text-3xl max-sm:max-w-[300px] sm:text-5xl md:max-w-xl lg:max-w-[730px] lg:text-6xl">
-          {heading}
-        </span>
-        <span className="text-center text-lg max-lg:max-w-lg max-sm:max-w-[300px] md:text-2xl">
-          {text}
-        </span>
-        <button className="bg-tertiary p-3 text-xl transition duration-300 hover:bg-opacity-75 md:p-5">
-          {buttonText}
-        </button>
+      <div className="mx-auto flex max-w-7xl flex-row justify-between px-5">
+        <FaChevronLeft
+          onClick={onPreviousTab}
+          className="size-6 -translate-y-72 rounded-full border border-white bg-transparent p-1 text-white transition-all duration-300 hover:border-none hover:bg-primary md:size-[50px] md:p-3"
+        />
+        <div className="flex -translate-y-96 flex-col items-center justify-center gap-y-5 font-bold text-white">
+          <span className="text-lg md:text-2xl">{date}</span>
+          <span className="text-3xl max-sm:max-w-[300px] sm:text-5xl md:max-w-xl lg:max-w-[730px] lg:text-6xl">
+            {heading}
+          </span>
+          <span className="text-center text-lg max-lg:max-w-lg max-sm:max-w-[300px] md:text-2xl">
+            {text}
+          </span>
+          <button className="bg-tertiary p-3 text-xl transition duration-300 hover:bg-opacity-75 md:p-5">
+            {buttonText}
+          </button>
+        </div>
+        <FaChevronRight
+          onClick={onNextTab}
+          className="size-6 -translate-y-72 rounded-full border border-white bg-transparent p-1 text-white transition-all duration-300 hover:border-none hover:bg-primary md:size-[50px] md:p-3"
+        />
       </div>
-      <FaChevronRight
-        onClick={onNextTab}
-        className="border-whit4 hover:bg-primary absolute right-5 top-1/2 size-6 rounded-full border border-white bg-transparent p-1 text-white transition-all duration-300 hover:border-none md:size-[50px] md:p-3"
-      />
-      <FaChevronLeft
-        onClick={onPreviousTab}
-        className="hover:bg-primary absolute left-5 top-1/2 size-6 rounded-full border border-white bg-transparent p-1 text-white transition-all duration-300 hover:border-none md:size-[50px] md:p-3"
-      />
     </li>
   );
 };

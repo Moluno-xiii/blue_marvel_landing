@@ -52,7 +52,7 @@ const Services = () => {
   return (
     <div className="mb-28 bg-[#f6f7f9] px-3 md:mb-48 md:px-7">
       <div className="mx-auto flex max-w-7xl flex-col gap-y-10 px-10 py-10 text-black">
-        <span className="self-center text-4xl font-bold underline">
+        <span className="border-b-primary self-center border-b-2 pb-1 text-4xl font-bold">
           Services
         </span>
         <ul
@@ -87,9 +87,9 @@ const Service = ({
       </div>
       <div className="z-2 absolute top-28 flex h-[250px] max-w-[340px] flex-col justify-between bg-white px-4 py-3 text-black shadow-lg transition-all duration-500 hover:-translate-x-5 hover:shadow-2xl max-md:left-20 sm:top-40 md:-right-10">
         <p className="relative mt-3 font-semibold xl:text-xl">{service.text}</p>
-        <div className="flex cursor-pointer flex-row items-center gap-x-2 self-start border-orange-500 pb-1 transition-all duration-100 hover:border-b-2">
+        <div className="border-primary flex cursor-pointer flex-row items-center gap-x-2 self-start pb-1 transition-all duration-100 hover:border-b-2">
           <span className="max-sm:text-sm">Learn more</span>
-          <FaChevronRight className="text-orange-500" />
+          <FaChevronRight className="text-primary" />
         </div>
         <span className="absolute -left-7 -top-5 bg-black px-4 py-2 text-sm font-semibold text-white">
           {service.title}

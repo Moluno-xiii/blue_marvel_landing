@@ -7,6 +7,7 @@ export default {
         primary: "#03B0FF",
         secondary: "#004462",
         tertiary: "#Bd4257",
+        darkBlue: "#057caf",
       },
       fontFamily: {
         sans: ["Inter, Sans-serif"],

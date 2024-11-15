@@ -27,7 +27,7 @@ const TechStack = () => {
         <div className="flex flex-col items-center gap-y-7">
           <p className="text-2xl font-bold md:text-[40px]">
             Yes. We cover your tech stack{" "}
-            <span className="text-orange-500">.</span>
+            <span className="text-primary">.</span>
           </p>
           <span className="mx-auto max-w-[530px] text-center text-base md:text-xl">
             Our 4,000+ tem has expertise in almost every programming language.
@@ -37,14 +37,14 @@ const TechStack = () => {
           <ul className="flex flex-row flex-wrap justify-center gap-x-7 gap-y-2 px-3">
             {techStack.map((stack) => (
               <li
-                className="cursor-default text-xl font-extrabold capitalize text-black text-opacity-30 transition-all duration-300 hover:text-orange-500 md:text-3xl"
+                className="hover:text-primary cursor-default text-xl font-extrabold capitalize text-black text-opacity-30 transition-all duration-300 md:text-3xl"
                 key={stack}
               >
                 {stack}
               </li>
             ))}
           </ul>
-          <button className="border-b-2 border-black p-2 transition-all duration-100 hover:translate-x-5 hover:border-orange-500 hover:text-orange-500">
+          <button className="hover:border-primary hover:text-primary border-b-2 border-black p-2 transition-all duration-100 hover:translate-x-5">
             <span className="flex flex-row items-center justify-between gap-x-10 transition-all duration-300 hover:translate-x-5">
               Our full repertoire
               <HiOutlineArrowLongRight />

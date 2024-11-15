@@ -16,13 +16,13 @@ const Header = () => {
           <img src="/logo.svg" alt="blue marvel logo" />
         </div>
         <ul className="hidden flex-row justify-between gap-x-10 md:flex">
-          <li className="border-primary text-primary cursor-pointer pb-1 capitalize transition-all duration-100 hover:border-b-2 hover:text-opacity-75">
+          <li className="border-darkBlue text-darkBlue cursor-pointer pb-1 capitalize transition-all duration-100 hover:border-b-2 hover:text-opacity-75">
             <a href="#tech-stack">Tech Stack</a>
           </li>
-          <li className="border-primary text-primary cursor-pointer pb-1 capitalize transition-all duration-100 hover:border-b-2 hover:text-opacity-75">
+          <li className="border-darkBlue text-darkBlue cursor-pointer pb-1 capitalize transition-all duration-100 hover:border-b-2 hover:text-opacity-75">
             <a href="#partners">Partners</a>
           </li>
-          <li className="border-primary text-primary cursor-pointer pb-1 capitalize transition-all duration-100 hover:border-b-2 hover:text-opacity-75">
+          <li className="border-darkBlue text-darkBlue cursor-pointer pb-1 capitalize transition-all duration-100 hover:border-b-2 hover:text-opacity-75">
             <a href="#services">Services</a>
           </li>
         </ul>
